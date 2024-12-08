@@ -8,12 +8,12 @@ async def admin():
 
 @app.get("/user/{user_id}")
 async def user(user_id: int):
-    return {f"message: Вы вошли как пользователь № {user_id}"}
+    return {"message":f"Вы вошли как пользователь № {user_id}"}
 
 @app.get("/user")
 async def user_info(username: str = None, age: int = None):
-    return {f"message: Информация о пользователе. Имя: {username}, Возраст: {age}"}
+    return {"message":f"Информация о пользователе. Имя: {username}, Возраст: {age}"}
 
 @app.get("/")
 async def root():
-    return  {"message: Главная страница"}
+    return  {"message":"Главная страница"}
