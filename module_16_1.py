@@ -4,7 +4,7 @@ app =FastAPI()
 
 @app.get("/user/admin")
 async def admin():
-    return {"message: Вы вошли как администратор"}
+    return {"message":"Вы вошли как администратор"}
 
 @app.get("/user/{user_id}")
 async def user(user_id: int):
